@@ -1,14 +1,14 @@
-import {getConnectedUser} from '@/app/dal/user-dal'
+// import {getConnectedUser} from '@/app/dal/user-dal'
 import Logout from './logout-form'
 
-import {redirect} from 'next/navigation'
+// import {redirect} from 'next/navigation'
 
 async function Page() {
-  const user = await getConnectedUser()
+  // const user = await getConnectedUser()
 
-  if (!user) {
-    redirect('/sign-in')
-  }
+  // if (!user) {
+  //   redirect('/sign-in')
+  // }
   return (
     <div className="flex h-screen w-full items-center justify-center px-4">
       <Logout />

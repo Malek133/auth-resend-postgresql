@@ -1,6 +1,7 @@
 import Legal from '../_components/legal'
 import {Metadata} from 'next'
 import {SignInForm} from './sign-in-form'
+import LoginButton from '@/src/components/dashoard/LoginButtonGoogle'
 
 export const metadata: Metadata = {
   title: 'Authentication',
@@ -12,6 +13,7 @@ export default async function Page() {
   return (
     <>
       <div className="lg:p-8">
+        
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">
@@ -22,7 +24,9 @@ export default async function Page() {
             </p>
           </div>
           <SignInForm />
+        <LoginButton />  
         </div>
+        
       </div>
       <Legal />
     </>

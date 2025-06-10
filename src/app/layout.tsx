@@ -3,7 +3,7 @@ import type {Metadata} from 'next'
 import {Geist_Mono} from 'next/font/google'
 import './globals.css'
 import {ThemeProvider} from 'next-themes'
-
+import {SessionProvider} from "next-auth/react"
 import { cn } from '../lib/utils'
 import { Toaster } from '../components/ui/toaster'
 
@@ -42,7 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+            <SessionProvider>{children}</SessionProvider> 
           <Toaster />
         </ThemeProvider>
       </body>
