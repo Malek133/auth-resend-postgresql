@@ -9,13 +9,13 @@ import {buttonVariants} from '@/components/ui/button'
 import {cn} from '@/lib/utils'
 import {dashboardLinks} from '@/src/utils/constants'
 import {usePathname} from 'next/navigation'
-import { useSession } from 'next-auth/react'
+// import { useSession } from 'next-auth/react'
 
-// import {UserDTO} from '@/types/domain/user-types'
+ import {UserDTO} from '@/src/types/domain/user-types'
 
-const Sidebar = () => {
+const Sidebar = ({user}: {user?: UserDTO}) => {
   const pathname = usePathname()
-   const session = useSession()
+  //  const session = useSession()
   return (
     <div className="flex h-full flex-col gap-4 rounded-md p-4 md:border">
       <Link
@@ -53,7 +53,8 @@ const Sidebar = () => {
         <div className="hidden h-auto w-full grow rounded-md md:block" />
         <Separator className="hidden md:block" />
         <p className="hidden grow text-center md:block md:grow-0">
-          {session?.data?.user?.name}
+          {/* {session?.data?.user?.name} */}
+          {user?.name}
         </p>
          <SignOutButton
           variant={'ghost'}

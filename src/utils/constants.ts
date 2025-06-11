@@ -19,6 +19,6 @@ export const dashboardLinks: SidebarLink[] = [
   {href: '/dashboard', title: 'Dashboard', icon: Home},
   {href: '/account', title: 'Compte', icon: UserRound},
   {href: '/settings', title: 'Options', icon: Cog},
-  {href: '/finance', title: 'Finance', icon: BadgeEuro},
-  {href: '/health', title: 'Santé', icon: HeartPulse},
+  // {href: '/finance', title: 'Finance', icon: BadgeEuro},
+  // {href: '/health', title: 'Santé', icon: HeartPulse},
 ]
